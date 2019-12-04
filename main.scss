@@ -1,0 +1,249 @@
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+}
+body{
+    background-image: url(http://rulib.info/uploads/11_05_2013/view/201210/oboik.ru_55687.jpg);
+}
+header {
+	background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); 
+    height: 130px;
+    background-image: url(http://rulib.info/uploads/11_05_2013/view/201210/oboik.ru_55687.jpg);
+	padding: 20px 0;
+	
+	@media (max-width: 600px) {
+		img {
+			max-width: 120px;
+		}
+		.menu {
+			margin-left: 20px;
+		}
+	}
+	.content {
+		box-sizing: border-box;
+		background-color: #13090a;
+		border-radius: 15px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 600px) {
+			justify-content: none;
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+		img {
+			width: 100%;
+            max-width: 250px;
+            border-radius: 15px;
+		}
+		.menu {
+			width: 100%;
+			max-width: 300px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			a {
+         
+				display: block;
+				text-decoration: none;
+				color: white;
+				font-family: monospace sans-serif;
+				font-size: 22px;
+				padding: 5px;
+				padding-right: 30px;
+			}
+		}
+	}
+}
+
+.mainScreen {
+    background-image: url(http://rulib.info/uploads/11_05_2013/view/201210/oboik.ru_55687.jpg);
+    // background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+	max-height: 600px;
+		@media screen and (max-width: 451px) {
+			max-height: 1200px;
+			.mainScreenContent{
+				flex-direction: column-reverse;
+		
+			}
+		}
+	.mainScreenContent {
+		display: flex;
+		
+        aside {
+			background-color: #13090a;
+			// background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); 
+			height: 600px;
+			display: grid;
+			grid-template-areas: "one ." "one two" "three two" "three four" "five four" "five .";
+			grid-gap: 10px;
+			overflow-y: scroll;
+			width: 33%;
+            border: 0.1px solid black;
+            text-align: center;
+            padding: 5px;
+			color: wheat;
+	
+			@media screen and (max-width: 805px){
+				grid-template-areas: "one" "two" "three" "four" "five";
+			}
+			@media screen and (max-width: 400px){
+				height: 480px;
+			}
+			@media screen and (max-width: 451px){
+					width: 100%;
+						overflow-x: scroll;
+						overflow-y: auto;
+						grid-template-areas: "one two three four five";
+						grid-template-columns: 200px ;
+						grid-auto-columns: 200px;
+						height: auto;
+								}
+			.card {
+                padding: 5px;
+				background-color: rgba(102,102,102,0.5);
+				border: 1px dotted;
+				height: 350px;
+				border-radius: 5px;
+				background-image: url(https://img5.goodfon.ru/wallpaper/nbig/9/b0/lisa-morda-zhivotnoe-art.jpg);
+				
+				&:nth-child(1) {
+					grid-area: one;
+				}
+				&:nth-child(2) {
+					grid-area: two;
+				}
+				&:nth-child(3) {
+					grid-area: three;
+				}
+				&:nth-child(4) {
+					grid-area: four;
+				}
+				&:nth-child(5) {
+					grid-area: five;
+                }
+                img{
+                    border-radius: 50%;
+                    clip-path: circle(50% at 50% 50%);
+                    width: 100px;
+                }
+			}
+		}
+		main {
+            background-image: url(http://rulib.info/uploads/11_05_2013/view/201210/oboik.ru_55687.jpg);
+			display: grid;
+			width: 66%;
+			// overflow: hidden;
+			grid-template-areas: "first first ." ". second second" "mountain mountain mountain";
+			@media screen and (max-width: 700px){
+				grid-template-areas: "first first first" "second second second" "mountain mountain mountain";
+			}
+			@media screen and (max-width: 451px){
+				width: 100%;
+				margin-bottom: 20px;
+				margin-top: 50px;
+		}
+			grid-gap: 10px;
+			.card {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 5px;
+				background-color: linen;
+				margin-left: 20px;
+				border: 2px solid;
+				color: wheat;
+                // color: black;
+                // background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); 
+				// height: 100px;
+				background-color: #13090a;
+				
+				&:nth-child(1) {
+                    grid-area: first;
+                    padding-right: 5px;
+				}
+				&:nth-child(2) {
+					grid-area: second;
+                }
+                img{
+                    clip-path: circle(50% at 50% 50%);
+                    width: 150px;
+					padding: 2px;
+					@media screen and (max-width: 360px){
+						width: 100px;
+					}
+                }
+                p{
+                    padding: 10px;
+                }
+			}
+			img {
+				grid-area: mountain;
+                width: 100%;
+                padding-left: 5px;
+                border-radius: 5%;
+			
+			}
+		}
+	
+	}
+}
+
+
+.breadCrumbs {
+   background-image: url(http://rulib.info/uploads/11_05_2013/view/201210/oboik.ru_55687.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+	height: 30px;
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 5px;  
+    overflow: hidden;  
+    text-align: center;
+    flex-wrap: wrap;
+	color: wheat;
+	position: relative;
+	width: 100%;
+    span{
+		// background-color: red;
+		position: absolute;
+    animation-name: runspan;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	word-wrap: nowrap;
+	white-space: nowrap;
+    @keyframes runspan{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    }
+  
+}
+.content{
+    background-color:rgba(47, 45, 5, 0.5);
+    color: wheat;
+    padding: 0;
+    margin-top: 20px;
+	margin-right: 120px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    width: 100%;
+	grid-gap: 10px;
+	@media screen and (max-width: 700px){
+		grid-template-columns: 1fr;
+	}
+}
+footer{
+	margin-top: 20px;
+	padding: 20px;
+	color: wheat;
+	background-color: #13090a;
+}
